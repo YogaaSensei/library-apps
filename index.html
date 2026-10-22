@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Apps</title>
+    <link rel="shortcut icon" href="assets/open-book.ico" type="image/x-icon">
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+        <header class="header">
+            <h1 class="logo">
+                Library Apps
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="logo-icon size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                </svg>
+            </h1>
+
+            <button class="btn-add" id="btn-tambah" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </button>
+        </header>
+
+        <!-- if books empty -->
+         <main class="main">
+             <div id="library" class="library"></div>
+            <p id="empty" class="empty hidden">No books yet.Click the button <strong></strong>in the top right corner.</p>
+        </main>
+
+        <!-- footer -->
+         <footer class="footer">
+             <p>&copy; Copyright 2026 by <span>Yoga_</span></p>
+         </footer>
+
+         <!-- form adds books -->
+        <dialog id="dialog" class="dialog">
+          <form id="form-buku" novalidate>
+            <h2>Add new books</h2>
+
+             <label for="title">Header</label>
+            <input type="text" id="title" name="title" placeholder="Contoh: Atomic Habits" required>
+
+             <label for="author">Author</label>
+            <input type="text" id="author" name="author" placeholder="Contoh: James Clear" required>
+
+            <label for="pages">Pages</label>
+            <input type="number" id="pages" name="pages" min="1" placeholder="Contoh: 320" required>
+
+            <label class="checkbox">
+             <input type="checkbox" id="read" name="read">
+             <span>Already read</span>
+            </labe>
+
+      <p id="error" class="error hidden"></p>
+
+      <div class="form-actions">
+        <button type="button" id="btn-batal" class="btn btn-ghost">Cancel</button>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="dist/js/script.js"></script>
+</body>
+</html>
